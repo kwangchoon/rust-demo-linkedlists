@@ -1,0 +1,24 @@
+[package]
+name = "proj_linked_list"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "p1_safe_stack"
+path = "src/bin/p1_safe_stack.rs"
+
+[[bin]]
+name = "p2_unsafe_stack"
+path = "src/bin/p2_safe_stack.rs"
+
+[[bin]]
+name = "p3_safe_list"
+path = "src/bin/p3_safe_list.rs"
+
+[[bin]]
+name = "p1_unsafe_list"
+path = "src/bin/p4_unsafe_list.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
