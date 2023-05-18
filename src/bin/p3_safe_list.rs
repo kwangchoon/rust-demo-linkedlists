@@ -1,5 +1,18 @@
 #![allow(unused)]
 
+use std::{cell::RefCell, rc::Rc};
+
+struct Node<T> {
+    value: T,
+    next: Option<Rc<RefCell<Node<T>>>>,
+}
+
+struct SinglyLinkedList<T> {
+    head: Option<Rc<RefCell<Node<T>>>>,
+    tail: Option<Rc<RefCell<Node<T>>>>,
+    size: usize,
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;

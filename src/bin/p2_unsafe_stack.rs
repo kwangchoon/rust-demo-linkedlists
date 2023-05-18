@@ -1,11 +1,20 @@
 #![allow(unused)]
 
+struct Node<T> {
+    elem: T,
+    next: *mut Node<T>,
+}
+
+struct Stack<T> {
+    top: *mut Node<T>,
+    size: usize,
+}
 
 #[cfg(test)]
 mod tests {
     use super::*;
 
-    #[cfg(feature="skip")]
+    #[cfg(feature = "skip")]
     #[test]
     fn basics() {
         let mut stack = Stack::new();
@@ -16,7 +25,7 @@ mod tests {
         assert_eq!(stack.pop(), Some(1));
     }
 
-    #[cfg(feature="skip")]
+    #[cfg(feature = "skip")]
     #[test]
     fn peek() {
         let mut stack = Stack::new();
@@ -28,7 +37,7 @@ mod tests {
         assert_eq!(stack.peek_mut(), Some(&mut 1));
     }
 
-    #[cfg(feature="skip")]
+    #[cfg(feature = "skip")]
     #[test]
     fn into_iter() {
         let mut stack = Stack::new();
@@ -41,7 +50,7 @@ mod tests {
         }
     }
 
-    #[cfg(feature="skip")]
+    #[cfg(feature = "skip")]
     #[test]
     fn iter() {
         let mut stack = Stack::new();
@@ -54,7 +63,7 @@ mod tests {
         }
     }
 
-    #[cfg(feature="skip")]
+    #[cfg(feature = "skip")]
     #[test]
     fn iter_mut() {
         let mut stack = Stack::new();

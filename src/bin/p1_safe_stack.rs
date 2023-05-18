@@ -1,5 +1,15 @@
 #![allow(unused)]
 
+struct Node<T> {
+    elem: T,
+    next: Option<Box<Node<T>>>,
+}
+
+struct Stack<T> {
+    top: Option<Box<Node<T>>>,
+    size: usize,
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;

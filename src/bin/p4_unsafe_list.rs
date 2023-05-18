@@ -1,5 +1,18 @@
 #![allow(unused)]
 
+use std::ptr;
+
+struct Node<T> {
+    value: T,
+    next: *mut Node<T>,
+}
+
+struct SinglyLinkedList<T> {
+    head: *mut Node<T>,
+    tail: *mut Node<T>,
+    size: usize,
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
